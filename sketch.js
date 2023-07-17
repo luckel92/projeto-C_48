@@ -1,5 +1,5 @@
 var score =0;
-var gun,bluebubble,redbubble, bullet, backBoard;
+var gun,bluebubble,redbubble,bullet,backBoard,blast;
 
 var gunImg,bubbleImg, bulletImg, blastImg, backBoardImg;
 
@@ -114,8 +114,8 @@ function handleBubbleCollision(bubbleGroup){
        score=score+1;
     }
 
-    blast = Sprite(bullet.x+60, bullet.y, 50,50);
-    Image = ("blast.png")
+    blast= createSprite(150, width/2, 50,20)
+    blast.addImage(blastImg)
     blast.scale=0.3
     blast.life=10
     bulletGroup.destroyEach()
